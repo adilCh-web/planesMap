@@ -3,7 +3,7 @@ import {randomPlaneInTheSky} from './randomPlaneInTheSky.js';
 
 import { flightTurn} from './flightTurn.js';
 import { speeddown,speedup} from './controlSpeed.js';
-import {flightTime,getAltitude} from './time_Km_perFlight.js';
+import {flightTime,getAltitude,getDistanceFlight} from './time_Km_perFlight.js';
 import {planeLanding} from "./planeLanding.js"
 
 
@@ -12,6 +12,7 @@ import {planeLanding} from "./planeLanding.js"
 
    
 randomPlaneInTheSky()
+getDistanceFlight()
 
 
 

@@ -1,5 +1,6 @@
+import { getSpeed } from "./controlSpeed.js"
 
-
+var distance = 0
 var sec = 0
 let mins = document.getElementById("min")
 let altitude = document.getElementById("altitude")
@@ -22,7 +23,7 @@ function flightTime()
 
             mins.innerHTML = "FlightTime: " + hrs + "H:" + restMin + "MIN" + " " + restSec + "s"
     
-        },200)
+        },100)
 
         document.getElementById("startButton").setAttribute('disabled', 'disabled')
         
@@ -39,5 +40,35 @@ function getAltitude() //changing plane Size
 }
 
 
+function getDistanceFlight()
+{
+    setInterval(()=>
+    {
+        //console.log(getSpeed())
+        switch (parseInt(getSpeed()*10))
+        {
 
-export {flightTime,getAltitude}
+            case 6:
+                distance+= 720/216000     //720km/h    h=216000sec
+              document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
+              break;
+            case 4:
+                distance+= 480/216000     //720km/h    h=216000sec
+                document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
+              
+                break;
+            case 2:
+                distance+= 240/216000     //720km/h    h=216000sec
+                document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
+                break;
+      
+  
+
+
+        }
+    },10)
+}
+
+
+
+export {flightTime,getAltitude,getDistanceFlight}

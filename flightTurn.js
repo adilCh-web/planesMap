@@ -27,7 +27,7 @@ var horizontalPositionPX =  document.getElementById("horizontal")
   var interval_315_Dregree;
   var interval_337_Dregree;
 
-  
+
 
   
 
@@ -38,6 +38,7 @@ var horizontalPositionPX =  document.getElementById("horizontal")
     //console.log("here " + getSpeed())
     if (getSpeed() >= 0.2)  // flight rotation only when moving
     {
+
     document.getElementById("btn").innerHTML = "Turn"
     degreeFlight +=22.5
     document.getElementById("deg").innerHTML = 'Deg": ' +  degreeFlight
