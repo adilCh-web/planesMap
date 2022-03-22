@@ -1,4 +1,5 @@
 import {getSpeed} from "./controlSpeed.js";
+import { drawTraject } from "./drawTraject.js";
 
 
 var degreeFlight = -22.5;
@@ -7,6 +8,8 @@ plane.style.left="104px";
 plane.style.top="75px";
 var verticalPositionPX =  document.getElementById("vertical");
 var horizontalPositionPX =  document.getElementById("horizontal")
+
+
 
   //intervals 
 
@@ -57,8 +60,12 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        clearInterval(interval_337_Dregree)
        interval_0Dregree = setInterval(()=>{
        plane.style.left = (parseFloat(plane.style.left.replace("px","")) + getSpeed())+"px";
+    
        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")},1000);
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","");
+       drawTraject()
+    
+    },1000);
        degreeFlight = 0
    }
    else if(degreeFlight === 22.5)
@@ -71,6 +78,7 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
        verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
        verticalPositionPX.innerHTML = plane.style.top
+       drawTraject()
        }
        ,1000)
    }
@@ -82,7 +90,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
            plane.style.left = (parseFloat(plane.style.left.replace("px","")) + 0.5*getSpeed())+"px";
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 0.5*getSpeed())+"px";
            horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
 
@@ -94,7 +103,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        plane.style.left = (parseFloat(plane.style.left.replace("px","")) + 0.25*getSpeed())+"px";
        plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 0.75*getSpeed())+"px";
                horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
        ,1000)
    }
 
@@ -104,7 +114,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        interval_90_Dregree = setInterval(()=>{
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 1*getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
    else if(degreeFlight===112.5)
@@ -114,7 +125,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
            plane.style.left = (parseFloat(plane.style.left.replace("px","")) - 0.25*getSpeed())+"px";
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 0.75*getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
 
@@ -125,7 +137,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
            plane.style.left = (parseFloat(plane.style.left.replace("px","")) - 0.5*getSpeed())+"px";
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 0.5*getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
    else if(degreeFlight === 157.5)
@@ -136,7 +149,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
                plane.style.left = (parseFloat(plane.style.left.replace("px","")) - 0.75*getSpeed())+"px";
                plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 0.25*getSpeed())+"px";
                        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
                ,1000)
        
    }
@@ -147,7 +161,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        interval_180_Dregree = setInterval(()=>{
            plane.style.left = (parseFloat(plane.style.left.replace("px","")) - getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
    else if(degreeFlight===202.5)
@@ -158,7 +173,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
                plane.style.left = (parseFloat(plane.style.left.replace("px","")) - 0.75*getSpeed())+"px";
                plane.style.top = (parseFloat(plane.style.top.replace("px","")) - 0.25*getSpeed())+"px";
                        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
                ,1000)
    }
 
@@ -169,7 +185,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
            plane.style.left = (parseFloat(plane.style.left.replace("px","")) - 0.5*getSpeed())+"px";
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) - 0.5*getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
    else if(degreeFlight === 247.5)
@@ -179,7 +196,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
                plane.style.left = (parseFloat(plane.style.left.replace("px","")) - 0.25*getSpeed())+"px";
                plane.style.top = (parseFloat(plane.style.top.replace("px","")) - 0.75*getSpeed())+"px";
                        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
                ,1000)
    }
 
@@ -189,7 +207,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        interval_270_Dregree = setInterval(()=>{
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) - getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
 
@@ -200,7 +219,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
                plane.style.left = (parseFloat(plane.style.left.replace("px","")) + 0.25*getSpeed())+"px";
                plane.style.top = (parseFloat(plane.style.top.replace("px","")) - 0.75*getSpeed())+"px";
                        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
                ,1000)
        
    }
@@ -212,7 +232,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
            plane.style.left = (parseFloat(plane.style.left.replace("px","")) + 0.5*getSpeed())+"px";
            plane.style.top = (parseFloat(plane.style.top.replace("px","")) - 0.5*getSpeed())+"px";
                    horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
            ,1000)
    }
    else if(degreeFlight === 337.5)
@@ -222,7 +243,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
                plane.style.left = (parseFloat(plane.style.left.replace("px","")) + 0.75*getSpeed())+"px";
                plane.style.top = (parseFloat(plane.style.top.replace("px","")) - 0.25*getSpeed())+"px";
                        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
-       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")}
+       verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+       drawTraject()}
                ,1000)
        
    }
@@ -234,6 +256,7 @@ var horizontalPositionPX =  document.getElementById("horizontal")
            plane.style.left = (parseInt(plane.style.left.replace("px","")) + getSpeed())+"px"},1000);
            horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","") 
            verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
+           drawTraject()
 
            
    }

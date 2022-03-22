@@ -9,7 +9,7 @@ function planeNextOther(randomPlane)
     let closeDistanceLeft = 
     Math.abs(parseInt(plane.style.left.replace("","")) - parseInt(randomPlane.style.left.replace("","")) )
 
-    if(closeDistanceLeft <=50 &&closeDistanceTop<=50)
+    if(closeDistanceLeft <=20 &&closeDistanceTop<=20)
 
     {
         plane.style.backgroundColor = "red";

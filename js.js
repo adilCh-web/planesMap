@@ -13,6 +13,9 @@ import {planeLanding} from "./planeLanding.js"
    
 randomPlaneInTheSky()
 getDistanceFlight()
+document.getElementById("plane").style.height ="25px"
+
+
 
 
 

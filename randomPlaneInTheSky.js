@@ -25,9 +25,9 @@ import {removePlanes} from "./removeRandomPlane.js"
         flightRef.style.fontSize = "8px"
         flightRef.style.color ="white"
 
-        divRandomPlane.style.left = randomIntFromInterval(0,2400) + "px"
+        divRandomPlane.style.left = randomIntFromInterval(0,2425) + "px"
 
-        divRandomPlane.style.top = randomIntFromInterval(0,1340) + "px"
+        divRandomPlane.style.top = randomIntFromInterval(0,1330) + "px"
         //flightRef.style.top = (parseInt(randomPlane.style.top.replace("px","")) + 30) + "px"
         //flightRef.style.left = randomPlane.style.left
         let degrees = [360, 22.5, 45, 67.5, 90, 112.5, 135, 157.5, 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5]
