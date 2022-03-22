@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "styles.css" type = "text/css" rel = "stylesheet" />
+    <script src ="js.js" defer type="module"></script>
+
+
+</head>
+<body>
+    <h1>Dr Aviation</h1>
+
+    
+    <div class="container">
+        <div class = "flex">
+            <select>  
+                <option>--Select Departure City--</option>  
+                <option value="betina" >Betina</option>  
+                <option value="naomi" >Naomi</option>  
+                <option value="nordcity" >NordCity</option>  
+                <option value="bahara" >Bahara</option>  
+                <option value="nabihalia" >Nabihalia</option>  
+                <option value="barsa" >Barsa</option>  
+                <option value="vivid" >Vivid</option>  
+                <option value="mervat" >Mervat</option>  
+                <option value="solenzara" >Solenzara</option>  
+                <option value="dubalapin" >DubaLapin</option>   
+            </select>  
+         </form>  
+
+         <label id = "destination">Distanation City:</label>
+
+        </div>
+        <button onclick = "randomCity()">Go!</button>
+        <ul id="screensLabels">
+            <li>FlightTime</li>
+            <li id = "min">Flight Km's</li>
+        </ul>
+        <div id = "map">
+            <img src="./img/map.jpg" alt="map" id="img"/>
+            <img id = "plane" src="./img/airplane-png.png" alt="plane_png"/>
+
+        </div>
+
+        <div id = "dashBoard"> 
+            <div>
+                <h5 id = "altitude">Altitude</h5>
+                <h5 id = "displaySpeed">Speed: km/h</h5>
+                <h5 id = "deg">Deg": 0</h5>
+            </div>
+            <div>
+                <h5 id = "horizontal">horizontal Mapp:</h5>
+                <h5 id = "vertical">Vertical Mapp:</h5>
+                <h5 >still</h5>
+            </div>
+
+        </div>
+        <p id = "info"></p>
+        <div style = "text-align:center">
+        <label >Altitude</label><br>
+        <input type="range" min="0" max="12000" value="0" class="slider" id="AltitudeRange">
+        </div>
+
+        <ul>
+            <!--<button onclick = "flightTurnLeft()">Turn left</button> -->
+            
+            <div class = "speedDiv">
+                <h6>Speed</h6>
+                <ul>
+                    <button id = "speedUp" >+</button>
+                    <button id = "speedDown" >-</button>
+                </ul>
+            </div>
+            <button id = "startButton">SSpere</button>
+            <button id = "btn">Start</button>
+        </ul>
+
+
+        <div id = "landingDiv">
+            <label for="landing">Landing</label>
+            <input type="checkbox" id="landing" name="landing" >
+        </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    
+</body>
+
+</html>

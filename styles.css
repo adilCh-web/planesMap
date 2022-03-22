@@ -1,0 +1,150 @@
+*
+{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+h1
+{
+    color:red
+}
+
+#ground
+{
+    background-color: rgb(91, 129, 3);
+    height:30%;
+}
+#sky
+{
+    height:70%;
+    background-color: blue;
+}
+
+.container
+{
+    width:400px;
+    margin:auto auto;
+}
+#screen
+{
+    height:200px;
+}
+body
+{
+    background-color: black;;
+}
+
+h5{
+    color:rgb(2, 112, 2)
+}
+#map{
+    height:400px;
+    overflow: scroll; 
+    scroll-behavior:auto;
+    position:relative; 
+}
+#img
+{
+    width:2900px;
+
+}
+#plane
+{
+    position:absolute;
+    height:5px;
+
+
+}
+
+label, input
+{
+    color:green;
+    margin-top:10px;
+    text-align: center;
+}
+
+
+button{
+    height:15px;
+    width:70px;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 10px;
+}
+
+ul, #dashBoard ,.flex
+{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+
+}
+
+.speedDiv
+{
+    text-align: center;
+    color:white;
+    border:2px solid green;
+    padding:10px;
+    margin-top: 10px;
+}
+
+#destination, form
+{
+    width:200px;
+    color:black;
+    height:20px;
+    background-color: white;
+}
+
+#btn ,#startButton
+{
+    height:50px;
+    width:50px;
+    border-radius: 90px;
+    border:2px green solid
+}
+
+
+
+#landingDiv
+{
+    display:none;
+    justify-content: center;
+}
+input
+{
+    margin-left:50px;
+    justify-content: center;;
+}
+
+#screensLabels
+{
+    color:green;
+    font-size:12px;
+    font-weight:bold;
+    z-index:5;
+    justify-content: space-between;
+    display:flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+#AltitudeRange
+{
+    width:300px;
+    margin:auto auto;
+    background-color: green;
+}
+
+#info
+{
+    color:red;
+    font-style: italic;
+    font-size:10px;
+    text-align:center
+
+}
+
+
