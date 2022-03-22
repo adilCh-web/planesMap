@@ -9,19 +9,10 @@ h1
 {
     color:red;
     text-align:center;
-    
+
 }
 
-#ground
-{
-    background-color: rgb(91, 129, 3);
-    height:30%;
-}
-#sky
-{
-    height:70%;
-    background-color: blue;
-}
+
 
 .container
 {
@@ -41,20 +32,22 @@ h5{
     color:rgb(2, 112, 2)
 }
 #map{
-    height:350px;
+    max-height:350px;
     overflow: scroll; 
     scroll-behavior:auto;
     position:relative; 
+
+
 }
 #img
 {
-    width:2900px;
+    width:2400px;
 
 }
 #plane
 {
     position:absolute;
-    height:5px;
+    height:25px;
 
 
 }
@@ -94,7 +87,7 @@ ul, #dashBoard ,.flex
 
 #destination, form
 {
-    width:200px;
+    width:80px;
     color:black;
     height:20px;
     background-color: white;
@@ -145,7 +138,8 @@ input
     color:red;
     font-style: italic;
     font-size:10px;
-    text-align:center
+    text-align:center;
+    height:50px;
 
 }
 

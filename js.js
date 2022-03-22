@@ -31,6 +31,8 @@ document.getElementById("AltitudeRange").addEventListener("change",getAltitude)
 
 document.getElementById("landing").addEventListener("click",planeLanding)
 
+document.getElementById("randomCity").addEventListener("click",randomCity)
+
 
 
 

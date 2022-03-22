@@ -49,16 +49,16 @@ function getDistanceFlight()
         {
 
             case 6:
-                distance+= 720/216000     //720km/h    h=216000sec
+                distance+= 720/3600     //720km/h    h=3600 sec
               document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
               break;
             case 4:
-                distance+= 480/216000     //720km/h    h=216000sec
+                distance+= 480/3600     
                 document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
               
                 break;
             case 2:
-                distance+= 240/216000     //720km/h    h=216000sec
+                distance+= 240/3600     
                 document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
                 break;
       
@@ -66,7 +66,7 @@ function getDistanceFlight()
 
 
         }
-    },10)
+    },100)
 }
 
 

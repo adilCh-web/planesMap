@@ -3,8 +3,8 @@ import {getSpeed} from "./controlSpeed.js";
 
 var degreeFlight = -22.5;
 var plane = document.getElementById("plane");
-plane.style.left="127px";
-plane.style.top="92px";
+plane.style.left="104px";
+plane.style.top="75px";
 var verticalPositionPX =  document.getElementById("vertical");
 var horizontalPositionPX =  document.getElementById("horizontal")
 

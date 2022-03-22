@@ -17,8 +17,7 @@ function planeLanding()
       document.getElementById("plane").style.height = "10px"},5000)
 
       setTimeout(()=>{speed_ = 0;document.getElementById("displaySpeed").innerHTML = "Speed: "+ speed_ + "km/h";
-      document.getElementById("plane").style.height = "5px";
-      landing = true},8000) //getSpeed()=0
+      document.getElementById("plane").style.height = "5px";},8000) //getSpeed()=0
 
       
 
