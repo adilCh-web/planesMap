@@ -4,8 +4,8 @@ function drawTraject()
     let plane = document.getElementById("plane")
     let dotTraject = document.createElement("img")
     dotTraject.src = "./img/dot.png"
-    dotTraject.style.height = "10px"
-    dotTraject.style.width = "10px"
+    dotTraject.style.height = "5px"
+    dotTraject.style.width = "5px"
     dotTraject.style.zIndex =1
     let map = document.getElementById("map")
     map.appendChild(dotTraject)

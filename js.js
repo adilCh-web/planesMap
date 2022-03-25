@@ -5,6 +5,7 @@ import { flightTurn} from './flightTurn.js';
 import { speeddown,speedup} from './controlSpeed.js';
 import {flightTime,getAltitude,getDistanceFlight} from './time_Km_perFlight.js';
 import {planeLanding} from "./planeLanding.js"
+import {moving} from "./moving_concentration_Clouths.js"
 
 
 
@@ -13,6 +14,8 @@ import {planeLanding} from "./planeLanding.js"
    
 randomPlaneInTheSky()
 getDistanceFlight()
+moving()
+
 document.getElementById("plane").style.height ="25px"
 
 

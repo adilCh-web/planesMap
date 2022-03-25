@@ -12,6 +12,12 @@ h1
 
 }
 
+#clouds_1, #clouds_2, #clouds_3 ,#clouds_4
+{
+    position:absolute;
+
+}
+
 
 
 .container
