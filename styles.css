@@ -22,7 +22,7 @@ h1
 
 .container
 {
-    width:400px;
+    width:800px;
     margin:auto auto;
 }
 #screen
@@ -53,8 +53,8 @@ h5{
 #plane
 {
     position:absolute;
-    height:25px;
-    z-index: 4;
+    height:15px;
+    z-index: 3;
 
 
 
@@ -106,7 +106,7 @@ ul, #dashBoard ,.flex
     height:50px;
     width:50px;
     border-radius: 90px;
-    border:2px green solid
+    border:2px green solid;
 }
 
 
@@ -143,12 +143,29 @@ input
 
 #info
 {
-    color:red;
+    background-color:rgb(100, 5, 5);
+    display:block;
     font-style: italic;
     font-size:10px;
-    text-align:center;
+    margin:auto auto;
+    width:150px;
+    color:white;
     height:50px;
+    border:1px solid white;
+    padding:5px
+    
 
+}
+
+
+
+@media only screen and (max-width:600px)
+{
+.container
+    {
+        width:400px;
+        margin:auto auto;
+    }
 }
 
 

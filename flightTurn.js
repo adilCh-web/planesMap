@@ -1,5 +1,6 @@
 import {getSpeed} from "./controlSpeed.js";
 import { drawTraject } from "./drawTraject.js";
+import { flightTime,getDistanceFlight } from "./time_Km_perFlight.js";
 
 
 var degreeFlight = -22.5;
@@ -30,6 +31,8 @@ var horizontalPositionPX =  document.getElementById("horizontal")
   var interval_315_Dregree;
   var interval_337_Dregree;
 
+  var startTime = true
+
 
 
   
@@ -39,8 +42,7 @@ var horizontalPositionPX =  document.getElementById("horizontal")
 
     
     //console.log("here " + getSpeed())
-    if (getSpeed() >= 0.2)  // flight rotation only when moving
-    {
+
 
     document.getElementById("btn").innerHTML = "Turn"
     degreeFlight +=22.5
@@ -48,7 +50,16 @@ var horizontalPositionPX =  document.getElementById("horizontal")
     plane.style.transform =  "rotate(" + degreeFlight +"deg)";
     console.log("this is the dgree " + degreeFlight);
     flightOrientation();
+
+    if(startTime)
+    {
+        let addPx = 6
+        getDistanceFlight()
+        flightTime();
+        startTime=false;
+
     }
+    
 
   }
 
@@ -77,7 +88,6 @@ var horizontalPositionPX =  document.getElementById("horizontal")
        plane.style.top = (parseFloat(plane.style.top.replace("px","")) + 0.25*getSpeed())+"px";
        horizontalPositionPX.innerHTML = "horizontal Mapp: " + plane.style.left.replace("px","")
        verticalPositionPX.innerHTML ="vertical Mapp: " + plane.style.top.replace("px","")
-       verticalPositionPX.innerHTML = plane.style.top
        drawTraject()
        }
        ,1000)

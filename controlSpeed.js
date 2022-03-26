@@ -14,6 +14,8 @@
 
 function speedup()
 {
+
+
     if (speed <=0.6)
     {
         speed+=0.2
@@ -29,9 +31,15 @@ function speedup()
            
         }
     }
+    if (speed !==0)
+    {
+        document.getElementById("btn").disabled = false;
+    }
+
 }
 function speeddown()
 {
+
     if (speed.toFixed(1) !=0.2 && speed !=0)
     {
         speed-=0.2

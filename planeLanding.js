@@ -1,4 +1,5 @@
 import {getSpeed} from "./controlSpeed.js"
+import {clearTime,clearDistance} from "./time_Km_perFlight.js"
 
 function planeLanding() 
 {
@@ -17,7 +18,11 @@ function planeLanding()
       document.getElementById("plane").style.height = "10px"},5000)
 
       setTimeout(()=>{speed_ = 0;document.getElementById("displaySpeed").innerHTML = "Speed: "+ speed_ + "km/h";
-      document.getElementById("plane").style.height = "5px";},8000) //getSpeed()=0
+      document.getElementById("plane").style.height = "5px";
+      clearTime()
+      clearDistance()},8000) //getSpeed()=0
+
+
 
       
 
