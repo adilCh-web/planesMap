@@ -16,8 +16,8 @@
     
     <div class="container">
         <div class = "flex">
-            <select>  
-                <option>--Select Departure City--</option>  
+            <select id = "selectedCity">  
+                <option value = "">--Select Departure City--</option>  
                 <option value="betina" >Betina</option>  
                 <option value="naomi" >Naomi</option>  
                 <option value="nordcity" >NordCity</option>  
@@ -29,22 +29,24 @@
                 <option value="solenzara" >Solenzara</option>  
                 <option value="dubalapin" >DubaLapin</option>   
             </select>  
-         </form>  
-
-         <label id = "destination">Distanation City:</label>
-         <button id = "randomCity">Go!</button>
+        <button id = "randomCity">Go!</button>
+         <p id = "destination">Destination</p>
 
         </div>
-        <ul id="screensLabels">
-            <li id = "distance">Flight Km's</li>
-            <li id = "min">Flight Time</li>
-        </ul>
         <div id = "map">
-            <img src="./img/map.jpg" alt="map" id="img"/>
-            <img src="./img/clouds-png.png" id = "clouds_1" alt="clouds"/>
-            <img src="./img/clouds-png.png" id = "clouds_2" alt="clouds"/>
-            <img src="./img/clouds-png.png" id = "clouds_3" alt="clouds"/>
-            <img src="./img/clouds-png.png" id = "clouds_4" alt="clouds"/>
+            <div id = "zommingDiv" >
+                <ul class = "screenLabels">
+                    <button id = "zoomIn"  >Zoom In</button>
+                    <button id = "zoomOut"  >Zoom out</button>
+                </ul>
+
+            </div>
+            <img src="./img/map.jpg" alt="map" id="img" />
+            <img src="./img/clouds-png.png" id = "c1" alt="clouds" class = "clouds"/>
+            <img src="./img/clouds-png.png" id = "c2" alt="clouds" class = "clouds"/>
+            <img src="./img/clouds-png.png" id = "c3" alt="clouds" class = "clouds"/>
+            <img src="./img/clouds-png.png" id = "c4" alt="clouds" class = "clouds"/>
+
 
             <img id = "plane" src="./img/airplane-png.png" alt="plane_png"/>
 
@@ -52,11 +54,13 @@
 
         <div id = "dashBoard"> 
             <div>
+                <h5 id = "distance">Flight Km's</h5>
                 <h5 id = "altitude">Altitude</h5>
-                <h5 id = "displaySpeed">Speed: km/h</h5>
+                <h5 id = "displaySpeed">Speed: 0km/h</h5>
                 <h5 id = "deg">Deg": 0</h5>
             </div>
             <div>
+                <h5 id = "min">Flight Time</h5>
                 <h5 id = "horizontal">horizontal Mapp:</h5>
                 <h5 id = "vertical">Vertical Mapp:</h5>
                 <h5 >still</h5>
@@ -70,7 +74,6 @@
         </div>
 
         <ul>
-            <!--<button onclick = "flightTurnLeft()">Turn left</button> -->
             
             <div class = "speedDiv">
                 <h6>Speed</h6>
@@ -87,11 +90,6 @@
             <label for="landing">Landing</label>
             <input type="checkbox" id="landing" name="landing" >
         </div>
-
-
-
-
-
 
         </div>
 

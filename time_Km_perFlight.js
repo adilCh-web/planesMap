@@ -1,4 +1,4 @@
-import { getSpeed } from "./controlSpeed.js"
+import { getSpeed } from "./controlSpeed_and _Landing.js"
 
 
 var intervalTime;
@@ -61,8 +61,12 @@ function getDistanceFlight()
         switch (parseInt(getSpeed()*10))
         {
             case 0:
-              document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
+                document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
               break;
+            case 10:
+                distance+=1200/3600
+                document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
+                break;     
 
             case 6:
                 distance+= 720/3600     //720km/h    h=3600 sec
@@ -77,6 +81,11 @@ function getDistanceFlight()
                 distance+= 240/3600     
                 document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
                 break;
+            case 8:
+                distance+= 960/3600     
+                document.getElementById("distance").innerHTML = "Flight Distance: " + distance.toFixed(2) + "KM"
+                break;
+            
       
   
 

@@ -1,4 +1,4 @@
-import { getSpeed } from "./controlSpeed.js"
+import { getSpeed } from "./controlSpeed_and _Landing.js"
 import {clearTime,clearDistance} from "./time_Km_perFlight.js"
 
 let plane = document.getElementById("plane")
@@ -27,13 +27,8 @@ function planeNextOther(randomPlane,reference)
                 plane.style.opacity = .3
                 plane.style.borderRadius = "90px";
                 document.getElementById("info").innerHTML = "!Warning!: " + closeDistanceLeft + " HZT - "  + closeDistanceTop + " VTC" + "<br>" + "Plane Reference: " + reference
-                console.log(closeDistanceLeft,closeDistanceTop)
+                //console.log(closeDistanceLeft,closeDistanceTop)
 
-                /*setTimeout(()=>
-                {
-                    plane.style.backgroundColor = "transparent";
-                    document.getElementById("info").innerHTML = "---------"
-                },7000)*/
                 if(closeDistanceLeft>=29 || closeDistanceTop>=29)
                 {
                     plane.style.backgroundColor = "transparent";

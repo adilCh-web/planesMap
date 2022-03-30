@@ -12,9 +12,11 @@ h1
 
 }
 
-#clouds_1, #clouds_2, #clouds_3 ,#clouds_4
+.clouds
 {
     position:absolute;
+    z-index:3
+
 
 }
 
@@ -41,24 +43,22 @@ h5{
     max-height:350px;
     overflow: scroll; 
     scroll-behavior:auto;
-    position:relative; 
+    position:relative;
+    border: 5px solid green;
+    background-color: rgb(72, 90, 140)
 
 
 }
-#img
-{
-    width:2400px;
 
-}
+
+
 #plane
 {
     position:absolute;
     height:15px;
-    z-index: 3;
-
-
-
+    z-index: 10;
 }
+
 
 label, input
 {
@@ -81,7 +81,28 @@ ul, #dashBoard ,.flex
     justify-content: space-around;
     display: flex;
     align-items: center;
+    padding:2px;
+}
 
+.flex
+{
+    background-color: green;
+    font-weight:bold;
+    color:white;
+    align-self: center;
+}
+.flex button,.flex select
+{
+    background-color:green;
+    color:white;
+    border:none;
+}
+
+#dashBoard div 
+{
+    width:50%;
+    border:2px solid white;
+    padding:10px
 }
 
 .speedDiv
@@ -93,12 +114,10 @@ ul, #dashBoard ,.flex
     margin-top: 10px;
 }
 
-#destination, form
+#destination
 {
     width:80px;
-    color:black;
     height:20px;
-    background-color: white;
 }
 
 #btn ,#startButton
@@ -122,7 +141,7 @@ input
     justify-content: center;;
 }
 
-#screensLabels
+.screensLabels
 {
     color:green;
     font-size:12px;
@@ -148,13 +167,36 @@ input
     font-style: italic;
     font-size:10px;
     margin:auto auto;
+    margin-top:20px;
     width:150px;
     color:white;
     height:50px;
     border:1px solid white;
-    padding:5px
+    padding:5px;
+
+
     
 
+}
+
+#zommingDiv
+{
+    display:absolute;
+    justify-content:right;
+    position:sticky;
+    top:10px;
+    left:0px;
+    z-index:12;
+
+
+}
+
+#zommingDiv button
+{
+    background-color: green;
+    border-radius: 90px;
+    color:white;
+    margin:auto auto;
 }
 
 
@@ -167,5 +209,9 @@ input
         margin:auto auto;
     }
 }
+
+
+
+
 
 
