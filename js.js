@@ -57,8 +57,6 @@ document.getElementById("randomCity").addEventListener("click",randomCity)
 
 
 
-  
 
- 
  
 

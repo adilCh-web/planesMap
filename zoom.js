@@ -51,6 +51,7 @@ function zoomIn()
         zoom*=1.25
 
         changeSize(map,"width",1.25)
+        
         changeSize(plane,"top",1.25)
         changeSize(plane,"left",1.25)
         changeSize(document.getElementById("c1"),"width",1.25)
@@ -70,7 +71,7 @@ function zoomIn()
 
         for(let i=0;i<200;i++)
         {
-            if( typeof(document.getElementById("randomPlane"+ i)) !== "undefined" || document.getElementById("randomPlane"+ i) !== null)
+            if( typeof(document.getElementById("randomPlane"+ i)) !== "undefined" && document.getElementById("randomPlane"+ i) !== null)
             {
     
             let newTopPositionRandomPlane = parseFloat(document.getElementById("randomPlane"+ i).style.top.replace("px",""))*1.25
@@ -78,10 +79,7 @@ function zoomIn()
             let newLeftPositionRandomPlane = parseFloat(document.getElementById("randomPlane" + i).style.left.replace("px",""))*1.25
             document.getElementById("randomPlane" + i).style.left = newLeftPositionRandomPlane + "px"
             }
-            else
-            {
-                continue; // when a randomPlane is removed than we skip its id attribute so we avoid errors
-            }
+
         
         }
     }
@@ -94,7 +92,7 @@ function zoomIn()
 function zoomOut()
 
 {
-    if(zoom !=1)
+    if(zoom !=0.512)
     {
         zoom/=1.25
 
@@ -121,15 +119,14 @@ function zoomOut()
 
         for(let i=0;i<200;i++)
         {
-            if(typeof(document.getElementById("randomPlane"+ i))!== "undefined" || document.getElementById("randomPlane"+ i) !== null)
+            if(typeof(document.getElementById("randomPlane"+ i))!== "undefined" && document.getElementById("randomPlane"+ i) !== null)
             {
+                
                 changeSize(document.getElementById("randomPlane"+ i),"top",1/1.25)
                 changeSize(document.getElementById("randomPlane"+ i),"left",1/1.25)
             }
-            else
-            {
-                continue; // when a randomPlane is removed than we skip its id attribute so we avoid errors
-            }
+
+
 
         }
         //console.log(newTopPosition)

@@ -12,9 +12,10 @@ function removePlanes(randomPlane)
      || 
      parseInt(randomPlane.style.top.replace("px",""))  < 0)
 {
-    //console.log(randomPlane.style.left,randomPlane.style.top)
+    console.log("somthing removed")
+    
     randomPlane.remove()
-    print("somthing removed")
+    
 
 }
 }

@@ -51,7 +51,7 @@ function planeNextOther(randomPlane,reference)
                 explosion.style.height= "40px"
 
                 document.getElementById("map").appendChild(explosion)
-
+                explosion.style.zIndex = 90
                 plane.remove()
                 document.getElementById("info").innerHTML = "EXPLOSION"
                 randomPlane.remove()
