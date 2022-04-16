@@ -50,9 +50,9 @@ function moving()
         let opacity_3 = c3.style.opacity
         let opacity_4 = c4.style.opacity
         c1.style.opacity = parseFloat(opacity_1) + [-0.1,-0.05,0.05,0.15,-0.15,0.1][randomIntFromInterval(0,5)]
-        c2.style.opacity = parseFloat(opacity_2) + [-0.1,-0.05,0.05,0.15,-0.15,0.1][randomIntFromInterval(0,5)]
-        c3.style.opacity = parseFloat(opacity_3) + [-0.1,-0.05,0.05,0.15,-0.15,0.1][randomIntFromInterval(0,5)]
-        c4.style.opacity = parseFloat(opacity_4) + [-0.1,-0.05,0.05,0.15,-0.15,0.1][randomIntFromInterval(0,5)]
+        c2.style.opacity = parseFloat(opacity_2) + [-0.1,-0.05,0.05,0.15,-0.15,0.1,-0.05][randomIntFromInterval(0,6)]
+        c3.style.opacity = parseFloat(opacity_3) + [-0.1,-0.05,0.05,0.15,-0.15,0.1,-0.05][randomIntFromInterval(0,6)]
+        c4.style.opacity = parseFloat(opacity_4) + [-0.1,-0.05,0.05,0.15,-0.15,0.1,-0.05][randomIntFromInterval(0,6)]
 
     },[1000,2000,3000,4000,5000][randomIntFromInterval(0,4)])
     setInterval(()=>{

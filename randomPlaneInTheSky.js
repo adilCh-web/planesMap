@@ -8,6 +8,7 @@ import {getZoom} from "./zoom.js"
  {
     for(let x = 0;x<200;x++)
     {
+        let interval 
         let divMap = document.getElementById("map")
         let divRandomPlane = document.createElement("div") // div to put an image plane and its flight reference
         const randomPlane = document.createElement("img");
@@ -46,159 +47,159 @@ import {getZoom} from "./zoom.js"
 
         switch (deg) {
             case 360:
-              setInterval(()=>{
+              interval = setInterval(()=>{
                 
                 divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + (getZoom()*speedRandomPlane))+"px"
 
                 planeNextOther(divRandomPlane,flightRef.innerHTML);
-                removePlanes(divRandomPlane)
+                removePlanes(divRandomPlane,interval)
                 },1000)
 
               break;
             case 22.5:
-              setInterval(()=>{
+              interval = setInterval(()=>{
                 divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + 0.75*getZoom()*speedRandomPlane)+"px";
                 divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + 0.25*getZoom()*speedRandomPlane)+"px";
                 planeNextOther(divRandomPlane,flightRef.innerHTML);
-                removePlanes(divRandomPlane)
+                removePlanes(divRandomPlane,interval)
                 }
                 ,1000)
                 
                 
               break;
             case 45:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                 divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + 0.50*getZoom()*speedRandomPlane)+"px";
                 divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + 0.50*getZoom()*speedRandomPlane)+"px";
                 planeNextOther(divRandomPlane,flightRef.innerHTML)  
-                removePlanes(divRandomPlane)         
+                removePlanes(divRandomPlane,interval)         
                 }
                 ,1000)
                 
               break;
             case 67.5:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + 0.25*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + 0.75*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
 
 
               break;
               case 90:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
 
 
               break;
             case 112.5:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - 0.25*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + 0.75*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
                     
               break;
             case 135:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - 0.50*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + 0.50*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML);
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                 }
                 ,1000)
                 
               break;
             case 157.5:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - 0.75*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) + 0.25*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
                     
 
             case 180:
-                setInterval(()=>{
+                interval =setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
                     
                 break;
             case 202.5:
-                setInterval(()=>{
+                interval =setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - 0.75*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - 0.25*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
                    
 
                 break;
             case 225:
-                setInterval(()=>{
+                interval =setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - 0.5*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - 0.5*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
             
                 break;
             case 247.5:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) - 0.25*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - 0.75*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     },1000)
                 break;
             case 270:
-                setInterval(()=>{
+                interval =setInterval(()=>{
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)}
+                    removePlanes(divRandomPlane,interval)}
                     ,1000)
                   
                     
                 break;
             case 292.5:
-                setInterval(()=>{
+                interval =setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + 0.25*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - 0.75*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
 
                 break;
             case 315:
-                setInterval(()=>{
+                interval = setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + 0.5*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - 0.5*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)
+                    removePlanes(divRandomPlane,interval)
                     }
                     ,1000)
                     
             case 337.5:
-                setInterval(()=>{
+                interval =setInterval(()=>{
                     divRandomPlane.style.left = (parseFloat(divRandomPlane.style.left.replace("px","")) + 0.75*getZoom()*speedRandomPlane)+"px";
                     divRandomPlane.style.top = (parseFloat(divRandomPlane.style.top.replace("px","")) - 0.25*getZoom()*speedRandomPlane)+"px";
                     planeNextOther(divRandomPlane,flightRef.innerHTML)
-                    removePlanes(divRandomPlane)}
+                    removePlanes(divRandomPlane,interval)}
                     ,1000)
                     
                 break;
